@@ -1,0 +1,8 @@
+#+title: README
+#+author: jinjinir
+
+* The Odin Project Capstones
+
+This repository hosts my attempts at The Odin Project's challenges, projects, and capstones.
+
+I am currently learning about Ruby and eventually Ruby on Rails.
