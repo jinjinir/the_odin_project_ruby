@@ -28,4 +28,4 @@ def bubble_sort(array)
   array
 end
 
-p bubble_sort([4, 3, 78,100, 255, 2, 0, 2])
+p bubble_sort([4, 3, 78, -1, -200, 100, 255, 2, 0, 2])
