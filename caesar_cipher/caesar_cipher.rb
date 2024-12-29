@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
 
 def caesar_cipher(string, shift)
   # handle negative shifts and shifts > 26
@@ -12,14 +13,13 @@ def caesar_cipher(string, shift)
       ascii = char.ord
 
       # handle uppercase letters (65-90 in ascii)
-      if ascii.between?(65, 90)
-        new_ascii = ascii + shift
-        new_ascii = new_ascii > 90 ? (new_ascii - 26) : new_ascii
-        # handle lowercase letters (97-122 in ascii)
-      else
-        new_ascii = ascii + shift
-        new_ascii = new_ascii > 122 ? (new_ascii - 26) : new_ascii
-      end
+      new_ascii = ascii + shift
+      new_ascii = if ascii.between?(65, 90)
+                    new_ascii > 90 ? (new_ascii - 26) : new_ascii
+                  # handle lowercase letters (97-122 in ascii)
+                  else
+                    new_ascii > 122 ? (new_ascii - 26) : new_ascii
+                  end
 
       # convert back to character
       new_ascii.chr
