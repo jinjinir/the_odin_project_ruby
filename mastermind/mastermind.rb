@@ -1,3 +1,6 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
 class Mastermind
   COLORS = ['R', 'G', 'B', 'Y', 'W', 'O']  # Red, Green, Blue, Yellow, White, Orange
   CODE_LENGTH = 4
