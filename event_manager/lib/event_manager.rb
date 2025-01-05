@@ -5,15 +5,7 @@ require 'csv'
 puts 'Event Manager Initialized!'
 
 def clean_zipcode(zipcode)
-  zipcode = zipcode&.to_s || ''  # &. safe navigation with default return value
-  
-  if zipcode.length < 5
-    zipcode = zipcode.rjust(5, '0')
-  elsif zipcode.length > 5
-    zipcode = zipcode[0..4]
-  else
-    zipcode
-  end
+  zipcode.to_s.rjust(5, '0')[0..4]
 end
 
 contents = CSV.open(
